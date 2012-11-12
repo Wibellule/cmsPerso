@@ -10,22 +10,24 @@ if($total == 0){
 		<tr>
 			<th>ID</th>
 			<th>Titre</th>
+			<th>File</th>
 			<th>Statut</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
-		<?php //foreach($posts as $k=>$v):?>
+		<?php foreach($slider as $k=>$v):?>
 			<tr>
-				<td><?php //echo $v->id;?></td>
-				<td><?php //echo $v->name;?></td>
-				<td><span class="label <?php //echo ($v->online==1)?'label-success':'label-important';?>"><?php //echo ($v->online==1)?'En ligne':'Hors ligne';?></span></td>
+				<td><?php echo $v->id;?></td>
+				<td><?php echo $v->name;?></td>
+				<td><?php echo $v->file;?></td>
+				<td><span class="label <?php echo ($v->online==1)?'label-success':'label-important';?>"><?php echo ($v->online==1)?'En ligne':'Hors ligne';?></span></td>
 				<td>
-					<a href="<?php //echo router::url('admin/slide/edit/'.$v->id);?>"><i class="icon-edit"></i>&nbsp;Editer</a>
-					<a onclick="return confirm('Voulez-vous vraiment supprimer ce contenu ?');" href="<?php //echo router::url('admin/slide/delete/'.$v->id);?>"><i class="icon-trash"></i>&nbsp;Supprimer</a>
+					<a href="<?php echo router::url('admin/slider/edit/'.$v->id);?>"><i class="icon-edit"></i>&nbsp;Editer</a>
+					<a onclick="return confirm('Voulez-vous vraiment supprimer ce contenu ?');" href="<?php echo router::url('admin/slider/delete/'.$v->id);?>"><i class="icon-trash"></i>&nbsp;Supprimer</a>
 				</td>
 			</tr>
-		<?php //endforeach;?>
+		<?php endforeach;?>
 	</tbody>
 </table>
 <?php }?>

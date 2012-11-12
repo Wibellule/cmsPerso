@@ -8,11 +8,11 @@ class Slidercontroller extends controller{
 	}
 	
 	function admin_index(){
-		$this->loadModel('slide');
-		$d['slide'] = $this->slide->find(array(
-			'fields'	=>	'id,name,file'
+		$this->loadModel('slider');
+		$d['slider'] = $this->slider->find(array(
+			'fields'	=>	'id,name,file,online'
 		));
-		$d['total'] = count($d['slide']);
+		$d['total'] = count($d['slider']);
 		// debug($d['total']);
 		$this->set($d);
 	}
