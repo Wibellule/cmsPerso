@@ -16,7 +16,7 @@ class dispatcher
 		router::parse($this->request->url,$this->request);
 		$controller = $this->loadController();
 		$action = $this->request->action;
-		// debug($action);
+		// debug($controller);
 		if($this->request->prefix)
 		{
 			$action = $this->request->prefix.'_'.$action;

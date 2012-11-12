@@ -17,5 +17,5 @@ new dispatcher();
 ?>
 <div style="position:fixed;bottom:0; background:#900;color:#FFF;
 line-height:30px;height:30px;left:0;right:0;padding-left:10px;">
-<?php echo htmlentities('Page générée en : '.round(microtime(true) - $debut,5).' secondes');?>
+<?php echo 'Page g&eacute;n&eacute;r&eacute;e en : '.round(microtime(true) - $debut,5).' secondes';?>
 </div>

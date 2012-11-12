@@ -18,4 +18,5 @@ router::connect('/','post/index');
 router::connect('cockpit','cockpit/post/index');
 router::connect('post/:slug-:id','post/view/id:([0-9]+)/slug:([a-z0-9\-]+)');
 router::connect('blog/:action','post/:action');
+router::connect('page/:slug-:id','page/view/id:([0-9]+)/slug:([a-z0-9\-]+)');
 ?>

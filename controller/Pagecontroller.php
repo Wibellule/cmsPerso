@@ -7,9 +7,9 @@ class Pagecontroller extends controller
 		// $this->render('index');
 	// }
 	
-	function index(){
-		$this->render('index');
-	}
+	// function index(){
+		// $this->render('index');
+	// }
 	
 	function admin_index()
 	{
@@ -22,36 +22,37 @@ class Pagecontroller extends controller
 		$this->set($d);
 	}
 	
-	function view($id)
+	function view($id,$slug)
+	// function view($id)
 	{
 		/*Ancienne version du code*/
-			$this->loadModel('post');
-			$d['page'] = $this->post->findFirst(array('conditions' => array('id' => $id,'type' => 'page','online' => 1)));
-			if(empty($d['page']))
-			{
-				$this->e404('Page introuvable');
-			}
-			$d['pages'] = $this->post->find(
-				array('conditions' => array('type' => 'page'))
-			);
-			debug($d['pages'][0]->slug);
-			$this->set($d);
-		
 		// $this->loadModel('post');
-		// $d['pages'] = $this->post->findFirst(array(
-			// 'fiels'			=> 'id,slug,content,name',
-			// 'conditions'	=> array('type' => 'page','id' => $id,'online' => 1)
-		// ));
-		// if(empty($d['pages']))
+		// $d['page'] = $this->post->findFirst(array('conditions' => array('id' => $id,'type' => 'page','online' => 1)));
+		// if(empty($d['page']))
 		// {
 			// $this->e404('Page introuvable');
 		// }
-		// if($slug != $d['pages']->slug)
-		// {
-			// $this->redirect("page/view/id:$id/slug:".$d['pages']->slug,301);
-		// }
-		// debug($d['pages']);
+		// $d['pages'] = $this->post->find(
+			// array('conditions' => array('type' => 'page'))
+		// );
+
 		// $this->set($d);
+		
+		$this->loadModel('post');
+		$d['pages'] = $this->post->findFirst(array(
+			'fiels'			=> 'id,slug,content,name',
+			'conditions'	=> array('type' => 'page','id' => $id,'online' => 1)
+		));
+		// debug($d['pages']);
+		if(empty($d['pages']))
+		{
+			$this->e404('Page introuvable');
+		}
+		if($slug != $d['pages']->slug)
+		{
+			$this->redirect("page/view/id:$id/slug:".$d['pages']->slug,301);
+		}
+		$this->set($d);
 	}
 	
 	/**

@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h1><?php echo htmlentities('Zone réservé');?></h1>
+	<h1><?php echo 'Zone r&eacute;serv&eacute;e';?></h1>
 </div>
 	<form class="form-horizontal" method="post" action="<?php echo router::url('user/login');?>">
 		<?php echo $this->form->input('login','Identifiant');?>
