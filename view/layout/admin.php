@@ -15,6 +15,7 @@
 						<a class="btn" href="<?php echo router::url('/');?>" title=""><i class="icon-home"></i></a>
 						<a class="btn" href="<?php echo router::url('admin/post/index');?>" title=""><i class="icon-tag"></i>&nbsp;Articles</a>
 						<a class="btn" href="<?php echo router::url('admin/page/index');?>" title=""><i class="icon-file"></i>&nbsp;Pages</a>
+						<a class="btn" href="<?php echo router::url('admin/slider/index');?>" title=""><i class="icon-th-large"></i>&nbsp;Sliders</a>
 						<a class="btn" href="<?php echo router::url('user/logout');?>" title=""><i class="icon-ban-circle"></i>&nbsp;D&eacute;connexion</a>
 					</div>
 				</div>
