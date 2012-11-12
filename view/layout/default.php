@@ -11,8 +11,9 @@
 		<a class="brand" href='#'>CMS</a>
 			<div class="btn-toolbar">
 				<div class="btn-group">
-					<a class="btn" href="<?php echo router::url('post/index');?>"><i class="icon-home"></i></a>
+					<a class="btn" href="<?php echo router::url('home/index');?>"><i class="icon-home"></i></a>
 					<a class="btn" href='<?php echo router::url('post/index');?>'><i class="icon-tag"></i>&nbsp;Actualit&eacute;</a>
+					
 					<?php $pagesMenu = $this->request('Page','getMenu');?>
 					<?php foreach($pagesMenu as $p):?>
 						<a class="btn" href='<?php echo BASE_URL.'/page/view/'.$p->id; ?>'><i class="icon-file"></i>&nbsp;<?php echo $p->name;?></a>
