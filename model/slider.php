@@ -1,12 +1,7 @@
 <?php
 class slider extends model{
 
-	/**
-	*Fonction qui limite le nombre de slide dans le slider
-	*/
-	function limitSlide(){
-		
-	}
+	
 	
 	var $validate = array(
 		'name'	=> array(
@@ -18,7 +13,19 @@ class slider extends model{
 			// 'message'	=> 'L\'url n\'est pas valide'
 		// )
 	);
-
+	
+	/**
+	*Fonction qui limite le nombre de slide dans le slider
+	*/
+	function limitSlide(){
+		
+	}
+	
+	function sliderAll(){
+		$sql = "SELECT * FROM sliders";
+		$this->db->query($sql);
+	}
+	
 	function validates($data)//à mettre dans le model.php
 	{
 		$errors = array();

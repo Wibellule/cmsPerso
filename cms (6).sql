@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 13 Novembre 2012 à 16:02
+-- Généré le: Jeu 15 Novembre 2012 à 15:07
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.4.3
 
@@ -107,14 +107,16 @@ CREATE TABLE IF NOT EXISTS `sliders` (
   `file` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `online` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `sliders`
 --
 
 INSERT INTO `sliders` (`id`, `name`, `file`, `online`) VALUES
-(1, 'Test', '', 1);
+(1, 'Test', '2012-11/slide1.jpg', 1),
+(3, 'Slider2', '2012-11/slide2.jpg', 1),
+(4, 'Slider3', '2012-11/slide3.jpg', 1);
 
 -- --------------------------------------------------------
 

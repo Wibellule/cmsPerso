@@ -1,6 +1,7 @@
 <?php
 require 'sessions.php';
 require 'form.php';
+require 'slide.php';
 require 'functions.php';
 require 'router.php';
 require ROOT.DS.'config'.DS.'conf.php';

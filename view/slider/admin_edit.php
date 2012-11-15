@@ -9,7 +9,7 @@
 		<div class="controls"><img width="100px" height="100px" src="<?php echo router::webroot('img/'.$v->file);?>"></div>
 		<div class="controls"><a onclick="return confirm('Voulez-vous vraiment supprimer cette image ?');" href="<?php echo router::url('admin/slider/delete_pic/'.$v->id);?>"><i class="icon-trash"></i>&nbsp;Supprimer</a></div>
 		<?php endforeach;?>
-		<?php }else{?><div class="controls">Il n'y a ps d'image associée à ce slide</div><?php } ?>
+		<?php }else{?><div class="controls"><p>Il n'y a pas d'image associ&eacute;e &agrave; ce slide</p></div><?php } ?>
 		<?php echo $this->form->input('file','Image',array('type'=>'file'));?>
 		<?php echo $this->form->input('online','En ligne',array('type'=>'checkbox'));?>
 		<input class="btn btn-primary" type="submit" value="Envoyer">

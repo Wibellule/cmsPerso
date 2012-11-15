@@ -19,4 +19,12 @@ function debug($var)
 		echo '</pre>';
 	}
 }
+
+function getElement($name){
+	if(file_exists(ELEMENTS.DS.$name.'.php')){
+		require ELEMENTS.DS.$name.'.php';
+	}else{
+		echo "le fichier est manquant";
+	}
+}
 ?>

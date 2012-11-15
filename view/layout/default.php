@@ -4,6 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 	<title><?php echo isset($title_for_layout)?$title_for_layout:'Mon cms';?></title>
 	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo router::webroot('css/carrousel.css');?>">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo router::webroot('js/carrousel.js');?>"></script>
+	
 </head>
 <body>
 	<div class='navbar' style='position:static;'>
@@ -46,6 +50,5 @@
 		<?php echo $content_for_layout;?>
 		<!--<div class="hero-unit"><iframe src="http://player.vimeo.com/video/50032019" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>-->
 	</div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 </body>
 </html>

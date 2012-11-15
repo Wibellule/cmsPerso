@@ -12,8 +12,12 @@ class controller
 	**/
 	function __construct($request = null)
 	{
+		/**
+		*Charge les helpers
+		*/
 		$this->session = new session();
 		$this->form = new form($this);
+		$this->slide = new slide($this);
 		if($request)
 		{
 			$this->request = $request;//On stock la request dans l'instance
