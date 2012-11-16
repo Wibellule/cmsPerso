@@ -1,4 +1,4 @@
-<?php echo debug($images); echo debug($_FILES);?>
+<?php //echo debug($images); echo debug($_FILES);?>
 <table class='table'>
 	<thead>
 		<tr>

@@ -48,7 +48,6 @@
 	<div class='container' style="padding-top:60px;">
 		<?php echo $this->session->flash(); ?>
 		<?php echo $content_for_layout;?>
-		<!--<div class="hero-unit"><iframe src="http://player.vimeo.com/video/50032019" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>-->
 	</div>
 </body>
 </html>

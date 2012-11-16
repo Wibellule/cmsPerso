@@ -104,7 +104,7 @@ class Postcontroller extends controller
 			}
 		}
 		$this->set($d);
-		debug($this->request->data);
+		// debug($this->request->data);
 	}
 	/**
 	*Permet de supprimer un article

@@ -32,6 +32,10 @@ class session
 		$_SESSION[$key] = $value;
 	}
 	
+	public function delete($key){
+		unset($_SESSION[$key]);
+	}
+	
 	public function read($key = null)
 	{
 		if($key)
