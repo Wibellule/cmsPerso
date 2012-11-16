@@ -1,28 +1,20 @@
 <?php
-class slider extends model{
+class focus extends model{
 
-	
-	
 	var $validate = array(
 		'name'	=> array(
 			'rule'		=> 'notEmpty',
 			'message'	=> 'Vous devez pr&eacute;ciser un titre'
+		),
+		'slug'	=> array(
+			'rule'		=> '([a-z0-9\-]+)',
+			'message'	=> 'L\'url n\'est pas valide'
 		)
-		// 'slug'	=> array(
-			// 'rule'		=> '([a-z0-9\-]+)',
-			// 'message'	=> 'L\'url n\'est pas valide'
-		// )
 	);
 	
-	/**
-	*Fonction qui limite le nombre de slide dans le slider
-	*/
-	function limitSlide(){
-		
-	}
 	
-	function sliderAll(){
-		$sql = "SELECT * FROM sliders";
+	function focusAll(){
+		$sql = "SELECT * FROM focuss";
 		$this->db->query($sql);
 	}
 	
@@ -65,8 +57,9 @@ class slider extends model{
 	}
 	
 	function delete_slide($id){
-		$sql = "UPDATE sliders SET file = '' WHERE id=$id";
+		$sql = "UPDATE focuss SET file = '' WHERE id=$id";
 		$this->db->query($sql);
 	}
+
 }
 ?>

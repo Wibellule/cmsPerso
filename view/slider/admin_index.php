@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h1><?php //echo $total;?> Slides</h1>
+	<h1><?php echo $total;?> Slides</h1>
 </div>
 <?php 
 if($total == 0){

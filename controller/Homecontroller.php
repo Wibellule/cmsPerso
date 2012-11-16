@@ -16,6 +16,12 @@ class Homecontroller extends controller{
 		/**
 		*FOCUS
 		*/
+		$this->loadModel('focus');
+		$conditions = array('online' => 1);
+		$d['focus'] = $this->focus->find(array(
+			'conditions' 	=> $conditions
+		));
+		$this->set($d);
 		
 		/**
 		*FOOTER

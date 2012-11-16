@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 15 Novembre 2012 à 15:07
+-- Généré le: Ven 16 Novembre 2012 à 15:58
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.4.3
 
@@ -33,6 +33,30 @@ CREATE TABLE IF NOT EXISTS `configs` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `focuss`
+--
+
+CREATE TABLE IF NOT EXISTS `focuss` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `slug` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `file` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `online` int(11) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `focuss`
+--
+
+INSERT INTO `focuss` (`id`, `name`, `slug`, `file`, `online`, `position`) VALUES
+(1, 'Mon premier focus', 'ma-premiere-page', '2012-11/LogoLechaud.png', 1, 1),
+(2, NULL, NULL, NULL, -1, NULL);
 
 -- --------------------------------------------------------
 
@@ -107,16 +131,17 @@ CREATE TABLE IF NOT EXISTS `sliders` (
   `file` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `online` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `sliders`
 --
 
 INSERT INTO `sliders` (`id`, `name`, `file`, `online`) VALUES
-(1, 'Test', '2012-11/slide1.jpg', 1),
+(1, 'Slider1', '2012-11/slide1.jpg', 1),
 (3, 'Slider2', '2012-11/slide2.jpg', 1),
-(4, 'Slider3', '2012-11/slide3.jpg', 1);
+(4, 'Slider3', '2012-11/slide3.jpg', 1),
+(5, 'Slider4', '2012-11/LogoLechaud.png', 1);
 
 -- --------------------------------------------------------
 

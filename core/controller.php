@@ -18,6 +18,7 @@ class controller
 		$this->session = new session();
 		$this->form = new form($this);
 		$this->slide = new slide($this);
+		$this->Hfocus = new Hfocus($this);
 		if($request)
 		{
 			$this->request = $request;//On stock la request dans l'instance

@@ -155,7 +155,7 @@ class model
 			$sql = 'INSERT INTO '.$this->table.' SET '.implode(',',$fields);
 			$action = 'insert';
 		}
-		debug($sql);
+		// debug($sql);
 		// debug($data->$key);
 		// debug($data);
 		$pre = $this->db->prepare($sql);

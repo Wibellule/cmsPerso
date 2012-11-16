@@ -19,7 +19,13 @@
 </div>
 <br />
 <div class='hero-unit'>
-	<h1 align="center">Focus Prochainement</h1>
+	<?php 
+			$i = 0;
+			foreach($focus as $k=>$v){
+				$i++;
+				echo $this->Hfocus->create($v->name,$v->file,$v->slug,$i);
+			}
+		?>
 </div>
 <br />
 <div class='hero-unit'>

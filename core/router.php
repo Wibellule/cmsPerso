@@ -128,6 +128,11 @@ class Router
 		trim($url,'/');
 		return BASE_URL.'/'.$url; 
 	}
+	
+	// static function redirUrl($url){
+		// trim($url,'/');
+		// return 
+	// }
 
 }
 
