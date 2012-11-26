@@ -1,3 +1,3 @@
 Projet CMS
 ==========
-Projet de création d'un cms personnel
+Projet de cr&eacute;ation d'un cms personnel
