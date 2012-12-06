@@ -17,7 +17,10 @@
 						<a class="btn" href="<?php echo router::url('admin/page/index');?>" title=""><i class="icon-file"></i>&nbsp;Pages</a>
 						<a class="btn" href="<?php echo router::url('admin/slider/index');?>" title=""><i class="icon-th-large"></i>&nbsp;Sliders</a>
 						<a class="btn" href="<?php echo router::url('admin/focus/index');?>" title=""><i class="icon-th"></i>&nbsp;Focus</a>
-						<a class="btn" href="<?php echo router::url('user/logout');?>" title=""><i class="icon-ban-circle"></i>&nbsp;D&eacute;connexion</a>
+						<a class="btn" href="<?php echo router::url('admin/emploi/index');?>" title=""><i class="icon-briefcase"></i>&nbsp;Emplois</a>
+						<a class="btn" href="<?php echo router::url('admin/education/index');?>" title=""><i class="icon-tasks"></i>&nbsp;Etudes</a>
+						<a class="btn" href="<?php echo router::url('admin/skill/index');?>" title=""><i class="icon-refresh"></i>&nbsp;Compétences</a>
+						<a class="btn" href="<?php echo router::url('user/logout');?>" title=""><i class="icon-ban-circle"></i>&nbsp;Déconnexion</a>
 					</div>
 				</div>
 			

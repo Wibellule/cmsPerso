@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 16 Novembre 2012 à 15:58
+-- Généré le: Mar 04 Décembre 2012 à 21:25
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.4.3
 
@@ -37,18 +37,56 @@ CREATE TABLE IF NOT EXISTS `configs` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `educations`
+--
+
+CREATE TABLE IF NOT EXISTS `educations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `subtitle` varchar(255) NOT NULL,
+  `content` longtext NOT NULL,
+  `date` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `emplois`
+--
+
+CREATE TABLE IF NOT EXISTS `emplois` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `subtitle` varchar(255) NOT NULL,
+  `content` longtext NOT NULL,
+  `date` int(11) NOT NULL,
+  `online` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `emplois`
+--
+
+INSERT INTO `emplois` (`id`, `title`, `subtitle`, `content`, `date`, `online`) VALUES
+(1, 'titre1', 'sous-titre1', '<p>test</p>', 2010, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `focuss`
 --
 
 CREATE TABLE IF NOT EXISTS `focuss` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `slug` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `file` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
   `online` int(11) DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `focuss`
@@ -122,16 +160,29 @@ INSERT INTO `posts` (`id`, `name`, `content`, `created`, `online`, `type`, `slug
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `skills`
+--
+
+CREATE TABLE IF NOT EXISTS `skills` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `sliders`
 --
 
 CREATE TABLE IF NOT EXISTS `sliders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `file` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
   `online` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `sliders`
@@ -141,7 +192,7 @@ INSERT INTO `sliders` (`id`, `name`, `file`, `online`) VALUES
 (1, 'Slider1', '2012-11/slide1.jpg', 1),
 (3, 'Slider2', '2012-11/slide2.jpg', 1),
 (4, 'Slider3', '2012-11/slide3.jpg', 1),
-(5, 'Slider4', '2012-11/LogoLechaud.png', 1);
+(5, 'Slider4', '2012-12/306774_506641992686384_2118315817_n.jpg', 0);
 
 -- --------------------------------------------------------
 
